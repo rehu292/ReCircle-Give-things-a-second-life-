@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReCircle | Give Things a Second Life</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <header class="header">
+      <nav class="navbar container">
+        <a href="#home" class="logo">
+          <span class="logo-icon">↻</span>
+          ReCircle<span class="logo-dot">.</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#marketplace">Marketplace</a></li>
+          <li><a href="#repair">Repair Hub</a></li>
+          <li><a href="#guide">Reuse Guide</a></li>
+          <li><a href="#challenges">Challenges</a></li>
+          <li><a href="#impact">Our Impact</a></li>
+        </ul>
+
+        <a href="#list-item" class="nav-button">List an Item <span>↗</span></a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <span class="eyebrow">
+              <span class="status-dot"></span>
+              SMALL ACTIONS. BIGGER CHANGE.
+            </span>
+
+            <h1>
+              Give Things<br />
+              a <span>Second Life.</span>
+            </h1>
+
+            <p>
+              A community where good things find new homes. Exchange, reuse,
+              repair and share everyday items to build a more responsible
+              future.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#marketplace" class="btn btn-primary">
+                Explore Community <span>↗</span>
+              </a>
+
+              <a href="#list-item" class="btn btn-outline"> List an Item </a>
+            </div>
+
+            <div class="hero-trust">
+              <div class="avatar-stack">
+                <span>R</span>
+                <span>A</span>
+                <span>S</span>
+                <span>M</span>
+              </div>
+              <div>
+                <strong>Community powered</strong>
+                <small>People helping people</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-image-card">
+              <img
+                src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=900&q=85"
+                alt="Green plants representing sustainability"
+              />
+            </div>
+
+            <div class="floating-card floating-top">
+              <span class="floating-icon">↗</span>
+              <div>
+                <strong>Reuse more</strong>
+                <small>Waste less</small>
+              </div>
+            </div>
+
+            <div class="floating-card floating-bottom">
+              <span class="floating-icon">♡</span>
+              <div>
+                <strong>Give with purpose</strong>
+                <small>Every item matters</small>
+              </div>
+            </div>
+
+            <div class="circle-decoration"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Impact Overview -->
+      <section class="quick-impact">
+        <div class="container impact-strip">
+          <div class="quick-impact-item">
+            <span class="quick-icon">↻</span>
+            <div>
+              <h3 id="homeItems">128</h3>
+              <p>Items Reused</p>
+            </div>
+          </div>
+
+          <div class="quick-impact-item">
+            <span class="quick-icon">♧</span>
+            <div>
+              <h3 id="homeWaste">245 kg</h3>
+              <p>Estimated Waste Prevented</p>
+            </div>
+          </div>
+
+          <div class="quick-impact-item">
+            <span class="quick-icon">♙</span>
+            <div>
+              <h3 id="homeMembers">86</h3>
+              <p>Community Members</p>
+            </div>
+          </div>
+
+          <div class="quick-impact-item">
+            <span class="quick-icon">✦</span>
+            <div>
+              <h3 id="homeChallenges">42</h3>
+              <p>Challenges Completed</p>
+            </div>
+          </div>
+        </div>
+        <p class="demo-note">
+          Illustrative demo statistics for this academic prototype.
+        </p>
+      </section>
+
+      <!-- Marketplace -->
+      <section class="section marketplace-section" id="marketplace">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">THE COMMUNITY MARKETPLACE</span>
+              <h2>Good things deserve<br />a <span>second home.</span></h2>
+            </div>
+
+            <a href="#list-item" class="text-link"> Share something ↗ </a>
+          </div>
+
+          <p class="section-description">
+            Discover useful items shared by people in the community. Find
+            something you need or pass on something you no longer use.
+          </p>
+
+          <div class="market-tools">
+            <div class="search-box">
+              <span>⌕</span>
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Search books, furniture, electronics..."
+              />
+            </div>
+
+            <select id="categoryFilter">
+              <option value="all">All Categories</option>
+              <option value="Books">Books</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Clothing">Clothing</option>
+              <option value="Furniture">Furniture</option>
+              <option value="Household">Household Items</option>
+            </select>
+
+            <select id="typeFilter">
+              <option value="all">All Listing Types</option>
+              <option value="Free">Free</option>
+              <option value="Exchange">Exchange</option>
+              <option value="Donation">Donation</option>
+            </select>
+          </div>
+
+          <div class="marketplace-grid" id="marketplaceGrid">
+            <!-- Items are added through JavaScript -->
+          </div>
+
+          <p class="empty-message hidden" id="emptyMessage">
+            No items found. Try another search or category.
+          </p>
+        </div>
+      </section>
+
+      <!-- List Item -->
+      <section class="section listing-section" id="list-item">
+        <div class="container listing-layout">
+          <div class="listing-info">
+            <span class="eyebrow">PASS IT FORWARD</span>
+
+            <h2>
+              Your unused item<br />
+              could be <span>someone's treasure.</span>
+            </h2>
+
+            <p>
+              Instead of throwing useful things away, give them another chance.
+              Add your item to our community marketplace and connect with
+              someone who needs it.
+            </p>
+
+            <div class="listing-benefit">
+              <span>01</span>
+              <div>
+                <strong>Reduce waste</strong>
+                <p>Keep useful products in circulation.</p>
+              </div>
+            </div>
+
+            <div class="listing-benefit">
+              <span>02</span>
+              <div>
+                <strong>Help someone</strong>
+                <p>Make useful things accessible to others.</p>
+              </div>
+            </div>
+
+            <div class="listing-benefit">
+              <span>03</span>
+              <div>
+                <strong>Build community</strong>
+                <p>Connect directly with people around you.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="listing-form-card">
+            <h3>Share an Item</h3>
+            <p class="form-subtitle">
+              Fill in the details below to create your listing.
+            </p>
+
+            <form id="listingForm">
+              <div class="form-group">
+                <label for="itemName">Item Name *</label>
+                <input
+                  type="text"
+                  id="itemName"
+                  placeholder="e.g. Wooden Study Table"
+                  required
+                />
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="itemCategory">Category *</label>
+                  <select id="itemCategory" required>
+                    <option value="">Select category</option>
+                    <option value="Books">Books</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Household">Household Items</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="itemCondition">Condition *</label>
+                  <select id="itemCondition" required>
+                    <option value="">Select condition</option>
+                    <option value="Like New">Like New</option>
+                    <option value="Good">Good</option>
+                    <option value="Used">Used</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="listingType">Listing Type *</label>
+                <select id="listingType" required>
+                  <option value="">Choose listing type</option>
+                  <option value="Free">Free</option>
+                  <option value="Exchange">Exchange</option>
+                  <option value="Donation">Donation</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="itemDescription">Description *</label>
+                <textarea
+                  id="itemDescription"
+                  rows="4"
+                  placeholder="Tell the community about your item..."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="contactInfo">Contact Information *</label>
+                <input
+                  type="text"
+                  id="contactInfo"
+                  placeholder="Email or preferred contact method"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="itemImage">Upload Item Image (Optional)</label>
+                <input type="file" id="itemImage" accept="image/*" />
+                <div class="image-preview" id="imagePreview">
+                  Image preview will appear here
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary form-submit">
+                Publish Listing <span>↗</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works -->
+      <section class="section how-section">
+        <div class="container">
+          <div class="center-heading">
+            <span class="eyebrow">SIMPLE BY DESIGN</span>
+            <h2>Making a difference is <span>easy.</span></h2>
+            <p>
+              Three simple steps to make everyday consumption more responsible.
+            </p>
+          </div>
+
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-number">01</div>
+              <div class="step-icon">⌕</div>
+              <h3>Discover</h3>
+              <p>Explore useful items shared by people in your community.</p>
+            </div>
+
+            <div class="step-card">
+              <div class="step-number">02</div>
+              <div class="step-icon">↔</div>
+              <h3>Connect</h3>
+              <p>Express interest and connect directly with the item owner.</p>
+            </div>
+
+            <div class="step-card">
+              <div class="step-number">03</div>
+              <div class="step-icon">♡</div>
+              <h3>Give Again</h3>
+              <p>Reuse, exchange, repair or donate instead of wasting.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Repair Hub -->
+      <section class="section repair-section" id="repair">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">REPAIR BEFORE REPLACE</span>
+              <h2>A little repair.<br /><span>A longer life.</span></h2>
+            </div>
+          </div>
+
+          <p class="section-description">
+            Many everyday products can be repaired and used again. Learn simple
+            ways to take care of the things you own.
+          </p>
+
+          <div class="repair-grid" id="repairGrid">
+            <article class="repair-card">
+              <div class="repair-image">
+                <img
+                  src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=700&q=80"
+                  alt="Electronic repair"
+                />
+                <span class="difficulty">Medium</span>
+              </div>
+              <div class="repair-content">
+                <span class="card-category">ELECTRONICS</span>
+                <h3>Care for Old Electronics</h3>
+                <p>Learn basic cleaning, cable checks and safe maintenance.</p>
+                <button class="text-link guide-button" data-guide="electronics">
+                  Read Repair Guide ↗
+                </button>
+              </div>
+            </article>
+
+            <article class="repair-card">
+              <div class="repair-image">
+                <img
+                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&q=80"
+                  alt="Clothing repair"
+                />
+                <span class="difficulty">Easy</span>
+              </div>
+              <div class="repair-content">
+                <span class="card-category">CLOTHING</span>
+                <h3>Repair Your Clothes</h3>
+                <p>
+                  Simple stitching and button replacement can save garments.
+                </p>
+                <button class="text-link guide-button" data-guide="clothing">
+                  Read Repair Guide ↗
+                </button>
+              </div>
+            </article>
+
+            <article class="repair-card">
+              <div class="repair-image">
+                <img
+                  src="https://images.unsplash.com/photo-1538688423619-a81d3f23454b?auto=format&fit=crop&w=700&q=80"
+                  alt="Furniture repair"
+                />
+                <span class="difficulty">Medium</span>
+              </div>
+              <div class="repair-content">
+                <span class="card-category">FURNITURE</span>
+                <h3>Restore Old Furniture</h3>
+                <p>Give chairs, tables and shelves a fresh and useful life.</p>
+                <button class="text-link guide-button" data-guide="furniture">
+                  Read Repair Guide ↗
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reuse and Recycling Guide -->
+      <section class="section guide-section" id="guide">
+        <div class="container">
+          <div class="center-heading">
+            <span class="eyebrow">MAKE BETTER EVERYDAY CHOICES</span>
+            <h2>Small habits. <span>Lasting impact.</span></h2>
+            <p>
+              Simple ideas to reuse and handle everyday materials responsibly.
+            </p>
+          </div>
+
+          <div class="reuse-grid">
+            <div class="reuse-card">
+              <span class="reuse-icon">▤</span>
+              <h3>Paper & Books</h3>
+              <p>
+                Reuse notebooks, donate readable books and keep paper dry for
+                recycling.
+              </p>
+              <span class="reuse-tip">TIP: Use both sides of paper.</span>
+            </div>
+
+            <div class="reuse-card">
+              <span class="reuse-icon">◇</span>
+              <h3>Plastic</h3>
+              <p>
+                Reuse safe containers where appropriate and check local
+                recycling guidance.
+              </p>
+              <span class="reuse-tip">TIP: Avoid single-use plastic.</span>
+            </div>
+
+            <div class="reuse-card">
+              <span class="reuse-icon">▱</span>
+              <h3>Electronics</h3>
+              <p>
+                Repair working devices, donate usable ones and use authorised
+                e-waste collection.
+              </p>
+              <span class="reuse-tip"
+                >TIP: Never mix e-waste with regular waste.</span
+              >
+            </div>
+
+            <div class="reuse-card">
+              <span class="reuse-icon">♧</span>
+              <h3>Clothing</h3>
+              <p>
+                Repair, exchange or donate wearable clothes instead of
+                discarding them.
+              </p>
+              <span class="reuse-tip">TIP: Try a clothing swap.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Community Challenges -->
+      <section class="section challenges-section" id="challenges">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">TAKE A SMALL STEP</span>
+              <h2>Make sustainability<br /><span>a daily habit.</span></h2>
+            </div>
+          </div>
+
+          <p class="section-description">
+            Join simple community challenges and track your progress. Every
+            completed action counts.
+          </p>
+
+          <div class="challenge-grid" id="challengeGrid">
+            <!-- Challenge cards are generated by JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Impact Dashboard -->
+      <section class="section dashboard-section" id="impact">
+        <div class="container">
+          <div class="center-heading">
+            <span class="eyebrow">OUR COLLECTIVE EFFORT</span>
+            <h2>Every action <span>adds up.</span></h2>
+            <p>
+              Explore the illustrative impact data of this ReCircle prototype.
+            </p>
+          </div>
+
+          <div class="dashboard-grid">
+            <div class="dashboard-card">
+              <span class="dashboard-icon">↻</span>
+              <p>Items Reused</p>
+              <h3 id="dashItems">128</h3>
+              <small>Illustrative demo count</small>
+            </div>
+
+            <div class="dashboard-card">
+              <span class="dashboard-icon">♧</span>
+              <p>Estimated Waste Prevented</p>
+              <h3 id="dashWaste">245 kg</h3>
+              <small>Illustrative estimate</small>
+            </div>
+
+            <div class="dashboard-card">
+              <span class="dashboard-icon">✦</span>
+              <p>Challenges Completed</p>
+              <h3 id="dashChallenges">42</h3>
+              <small>Demo starting value + user progress</small>
+            </div>
+
+            <div class="dashboard-card">
+              <span class="dashboard-icon">♙</span>
+              <p>Community Members</p>
+              <h3 id="dashMembers">86</h3>
+              <small>Illustrative demo count</small>
+            </div>
+          </div>
+
+          <div class="category-impact">
+            <div class="category-impact-heading">
+              <div>
+                <h3>Reuse by Category</h3>
+                <p>Illustrative distribution of sample activity</p>
+              </div>
+              <span class="demo-label">DEMO DATA</span>
+            </div>
+
+            <div id="categoryBars"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sustainability Assistant -->
+      <section class="section assistant-section" id="assistant">
+        <div class="container assistant-layout">
+          <div class="assistant-info">
+            <span class="eyebrow">YOUR EVERYDAY GREEN GUIDE</span>
+
+            <h2>
+              Not sure what to do<br />
+              with an <span>old item?</span>
+            </h2>
+
+            <p>
+              Tell our Smart Sustainability Assistant what you have. It will
+              suggest practical ways to reuse, repair or recycle it.
+            </p>
+
+            <div class="assistant-points">
+              <p>✓ Reuse ideas</p>
+              <p>✓ Repair possibilities</p>
+              <p>✓ Recycling suggestions</p>
+            </div>
+          </div>
+
+          <div class="assistant-box">
+            <div class="assistant-header">
+              <div class="assistant-avatar">✦</div>
+              <div>
+                <h3>Smart Sustainability Assistant</h3>
+                <p>Rule-based prototype assistant</p>
+              </div>
+              <span class="online-dot"></span>
+            </div>
+
+            <div class="assistant-chat" id="assistantChat">
+              <div class="bot-message">
+                Hello! Tell me about an item you no longer use. For example: old
+                laptop, plastic bottle, damaged chair or unused clothes.
+              </div>
+            </div>
+
+            <form id="assistantForm" class="assistant-input">
+              <input
+                type="text"
+                id="assistantInput"
+                placeholder="Type an item name..."
+                required
+              />
+              <button type="submit" aria-label="Send message">➤</button>
+            </form>
+
+            <p class="assistant-disclaimer">
+              Prototype: suggestions are generated using predefined JavaScript
+              rules, not a live AI model.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SDG 12 -->
+      <section class="section sdg-section" id="sdg">
+        <div class="container sdg-layout">
+          <div class="sdg-number">
+            <span>UN SUSTAINABLE DEVELOPMENT GOAL</span>
+            <strong>12</strong>
+            <p>RESPONSIBLE CONSUMPTION<br />AND PRODUCTION</p>
+          </div>
+
+          <div class="sdg-content">
+            <span class="eyebrow">A MORE RESPONSIBLE FUTURE</span>
+
+            <h2>Consume thoughtfully.<br /><span>Waste less.</span></h2>
+
+            <p>
+              Sustainable Development Goal 12 encourages responsible consumption
+              and production. It reminds us to use resources wisely, reduce
+              waste and make better choices in everyday life.
+            </p>
+
+            <p>
+              ReCircle supports this goal by helping individuals reuse,
+              exchange, repair and donate products. When people take small
+              actions together, they can encourage a more sustainable community.
+            </p>
+
+            <a
+              href="https://sdgs.un.org/goals/goal12"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-link"
+            >
+              Learn about SDG 12 ↗
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA -->
+      <section class="final-cta">
+        <div class="container final-cta-content">
+          <span class="eyebrow">YOUR ACTION MATTERS</span>
+          <h2>
+            One person's unused<br />item is another's
+            <span>new beginning.</span>
+          </h2>
+          <p>Be part of a community that believes in using things better.</p>
+
+          <div class="hero-buttons">
+            <a href="#marketplace" class="btn btn-light"
+              >Explore Marketplace ↗</a
+            >
+            <a href="#list-item" class="btn btn-cta-outline">Share an Item</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="logo footer-logo">
+            <span class="logo-icon">↻</span>
+            ReCircle<span class="logo-dot">.</span>
+          </a>
+
+          <p>
+            A community-powered platform making reuse, repair and responsible
+            consumption part of everyday life.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <a href="#marketplace">Marketplace</a>
+          <a href="#repair">Repair Hub</a>
+          <a href="#guide">Reuse Guide</a>
+          <a href="#challenges">Challenges</a>
+        </div>
+
+        <div class="footer-links">
+          <h4>Discover</h4>
+          <a href="#impact">Our Impact</a>
+          <a href="#assistant">Smart Assistant</a>
+          <a href="#sdg">SDG 12</a>
+          <a href="#list-item">List an Item</a>
+        </div>
+
+        <div class="footer-message">
+          <h4>Better things. Better habits.</h4>
+          <p>Let's make every resource count.</p>
+          <a href="#home" class="back-top">Back to top ↑</a>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© 2026 ReCircle. Academic Project Prototype.</p>
+        <p>Designed for a more responsible tomorrow.</p>
+      </div>
+    </footer>
+
+    <!-- Item Details Modal -->
+    <div class="modal-overlay hidden" id="itemModal">
+      <div class="modal-card">
+        <button class="modal-close" id="closeItemModal">×</button>
+        <div id="itemModalContent"></div>
+      </div>
+    </div>
+
+    <!-- Guide Details Modal -->
+    <div class="modal-overlay hidden" id="guideModal">
+      <div class="modal-card">
+        <button class="modal-close" id="closeGuideModal">×</button>
+        <div id="guideModalContent"></div>
+      </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
